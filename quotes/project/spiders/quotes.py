@@ -1,4 +1,5 @@
 import scrapy
+from project.items import QuoteItem
 
 
 class QuoteSpider(scrapy.Spider):
@@ -10,10 +11,10 @@ class QuoteSpider(scrapy.Spider):
 
 
         for quote in quotes:
-            title = quote.css('span.text::text').extract()
-            author = quote.css('.author::text').extract()
+            title = quote.css('span.text::text').extract_first()
+            author = quote.css('.author::text').extract_first()
             tags = quote.css('.tag::text').extract()
-            yield dict(
+            yield QuoteItem(
                 title=title,
                 author=author,
                 tags=tags
