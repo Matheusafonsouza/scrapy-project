@@ -8,10 +8,6 @@ Scrapy é um framework open source para extrair informações de diversas págin
 
 Esse repositório é um conjunto de dois projetos utilizando esse framework, utilizando a seguinte estrutura para organizar o projeto:
 
-
-
-An open source and collaborative framework for extracting the data you need from websites.
-In a fast, simple, yet extensible way.
 ## Features
 
 - Web scrapping (scrapy)
